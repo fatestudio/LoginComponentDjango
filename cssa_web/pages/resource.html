@@ -1,0 +1,15 @@
+<h1>Resourses</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+{% if resource_list %}
+    <ul>
+    {% for resource in resource_list %}
+        <li>{{ resource.name }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No resources are available.</p>
+{% endif %}
+
+<a href="/cssa/resource/addResource/">addResource</a>

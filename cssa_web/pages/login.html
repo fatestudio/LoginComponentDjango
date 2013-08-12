@@ -1,0 +1,11 @@
+<h1>Login</h1>
+
+<a href="register/">Register</a>
+
+<form id="login" action="/cssa/login/" method="post">{% csrf_token %}
+	Username: <input type="text" name="username" /> <br/>
+	Password: <input type="password" name="password" /> <br/>
+<input type="submit" value="Submit" />
+</form>
+
+<a href="../">Back to Homepage</a>

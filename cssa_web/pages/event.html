@@ -1,0 +1,15 @@
+<h1>Events</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+{% if event_list %}
+    <ul>
+    {% for event in event_list %}
+        <li>{{ event.name }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No events are available.</p>
+{% endif %}
+
+<a href="/cssa/event/addEvent/">addEvent</a>
